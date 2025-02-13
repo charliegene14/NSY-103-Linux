@@ -1,0 +1,246 @@
+<!-- HTML header for doxygen 1.13.2-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NSY103 - DENIER Charlie: Référence du fichier include/utils/print_message.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">NSY103 - DENIER Charlie
+   </div>
+   <div id="projectbrief">Documentation technique du projet du module NSY103, le problème des philosophes.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('print__message_8h.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Énumérations</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier print_message.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Définit des fonctions pour l'affichage de messages colorés sur la console.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdarg.h&gt;</code><br />
+</div>
+<p><a href="print__message_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:ac6606ebe91c8ac66a2c314c79f5ab013" id="r_ac6606ebe91c8ac66a2c314c79f5ab013"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6606ebe91c8ac66a2c314c79f5ab013">MessageType</a> { <b>INFO</b>
+, <b>SUCCESS</b>
+, <b>WARNING</b>
+, <b>ERROR</b>
+ }</td></tr>
+<tr class="memdesc:ac6606ebe91c8ac66a2c314c79f5ab013"><td class="mdescLeft">&#160;</td><td class="mdescRight">Énumération des types de messages.  <a href="#ac6606ebe91c8ac66a2c314c79f5ab013">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac6606ebe91c8ac66a2c314c79f5ab013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a0616179b37645cc8ec2013e725138281" id="r_a0616179b37645cc8ec2013e725138281"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0616179b37645cc8ec2013e725138281">getColor</a> (<a class="el" href="#ac6606ebe91c8ac66a2c314c79f5ab013">MessageType</a> type)</td></tr>
+<tr class="memdesc:a0616179b37645cc8ec2013e725138281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la séquence d'échappement ANSI correspondant à la couleur associée au type de message.  <br /></td></tr>
+<tr class="separator:a0616179b37645cc8ec2013e725138281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64a80f0bdbaf134ec8ccac970c9f2840" id="r_a64a80f0bdbaf134ec8ccac970c9f2840"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64a80f0bdbaf134ec8ccac970c9f2840">printMessage</a> (<a class="el" href="#ac6606ebe91c8ac66a2c314c79f5ab013">MessageType</a> type, const char *format,...)</td></tr>
+<tr class="memdesc:a64a80f0bdbaf134ec8ccac970c9f2840"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche un message formaté avec une couleur spécifique sur la console.  <br /></td></tr>
+<tr class="separator:a64a80f0bdbaf134ec8ccac970c9f2840"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Définit des fonctions pour l'affichage de messages colorés sur la console. </p>
+<p>Ce fichier d'en-tête fournit une énumération pour représenter différents types de messages (INFO, SUCCESS, WARNING, ERROR) ainsi que des fonctions permettant d'obtenir une couleur associée à un type de message et d'afficher un message formaté avec cette couleur. Les couleurs sont appliquées à l'aide des séquences d'échappement ANSI.</p>
+<p>Les inclusions nécessaires sont :</p><ul>
+<li>&lt;stdio.h&gt; pour la gestion de l'affichage.</li>
+<li>&lt;stdarg.h&gt; pour la gestion des arguments variables dans la fonction <a class="el" href="#a64a80f0bdbaf134ec8ccac970c9f2840" title="Affiche un message formaté avec une couleur spécifique sur la console.">printMessage()</a>.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Les séquences d'échappement ANSI utilisées ici peuvent ne pas être supportées par tous les terminaux. </dd></dl>
+</div><h2 class="groupheader">Documentation du type de l'énumération</h2>
+<a id="ac6606ebe91c8ac66a2c314c79f5ab013" name="ac6606ebe91c8ac66a2c314c79f5ab013"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6606ebe91c8ac66a2c314c79f5ab013">&#9670;&#160;</a></span>MessageType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ac6606ebe91c8ac66a2c314c79f5ab013">MessageType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Énumération des types de messages. </p>
+<p>Cette énumération représente les différents niveaux de gravité pour les messages affichés :</p><ul>
+<li>INFO : Messages d'information (affichés en bleu).</li>
+<li>SUCCESS : Messages de succès (affichés en vert).</li>
+<li>WARNING : Messages d'avertissement (affichés en jaune).</li>
+<li>ERROR : Messages d'erreur (affichés en rouge). </li>
+</ul>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a0616179b37645cc8ec2013e725138281" name="a0616179b37645cc8ec2013e725138281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0616179b37645cc8ec2013e725138281">&#9670;&#160;</a></span>getColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * getColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ac6606ebe91c8ac66a2c314c79f5ab013">MessageType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne la séquence d'échappement ANSI correspondant à la couleur associée au type de message. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Le type du message (INFO, SUCCESS, WARNING, ERROR). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>char* La séquence d'échappement ANSI pour la couleur correspondante. </dd></dl>
+
+</div>
+</div>
+<a id="a64a80f0bdbaf134ec8ccac970c9f2840" name="a64a80f0bdbaf134ec8ccac970c9f2840"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64a80f0bdbaf134ec8ccac970c9f2840">&#9670;&#160;</a></span>printMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printMessage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ac6606ebe91c8ac66a2c314c79f5ab013">MessageType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche un message formaté avec une couleur spécifique sur la console. </p>
+<p>Cette fonction affiche un message sur la console en utilisant un format de type printf, précédé de la séquence d'échappement de la couleur correspondant au type de message, et réinitialise la couleur à la fin de l'affichage.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Le type de message à afficher. </td></tr>
+    <tr><td class="paramname">format</td><td>La chaîne de format (comme pour printf) décrivant le message à afficher. </td></tr>
+    <tr><td class="paramname">...</td><td>Les arguments variables correspondant à la chaîne de format. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_821002d4f10779a80d4fb17bc32f21f1.html">utils</a></li><li class="navelem"><a class="el" href="print__message_8h.html">print_message.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

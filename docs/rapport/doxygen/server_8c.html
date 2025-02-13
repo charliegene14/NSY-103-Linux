@@ -1,0 +1,496 @@
+<!-- HTML header for doxygen 1.13.2-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NSY103 - DENIER Charlie: Référence du fichier src/server.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">NSY103 - DENIER Charlie
+   </div>
+   <div id="projectbrief">Documentation technique du projet du module NSY103, le problème des philosophes.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('server_8c.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier server.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Point d'entrée du serveur.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="sockets_8h_source.html">../include/utils/sockets.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="print__message_8h_source.html">../include/utils/print_message.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="random_8h_source.html">../include/utils/random.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_logs_8c_source.html">../include/managers/Logs.c</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_shared_resources_8c_source.html">../include/managers/SharedResources.c</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_server_philosopher_8c_source.html">../include/managers/ServerPhilosopher.c</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_request_8c_source.html">../include/managers/Request.c</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_response_8c_source.html">../include/managers/Response.c</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_server_context_8c_source.html">../include/managers/ServerContext.c</a>&quot;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;sys/shm.h&gt;</code><br />
+<code>#include &lt;sys/msg.h&gt;</code><br />
+<code>#include &lt;signal.h&gt;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;sys/wait.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;semaphore.h&gt;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a0c1699783bdad5f48bd36a6cb8fe040d" id="r_a0c1699783bdad5f48bd36a6cb8fe040d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c1699783bdad5f48bd36a6cb8fe040d">programEndHandler</a> (int signum)</td></tr>
+<tr class="memdesc:a0c1699783bdad5f48bd36a6cb8fe040d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handler de signal pour terminer le programme.  <br /></td></tr>
+<tr class="separator:a0c1699783bdad5f48bd36a6cb8fe040d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a991365d9c487583b3b2055dec068e676" id="r_a991365d9c487583b3b2055dec068e676"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a991365d9c487583b3b2055dec068e676">initEndSignals</a> ()</td></tr>
+<tr class="memdesc:a991365d9c487583b3b2055dec068e676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise les handlers pour les signaux SIGINT et SIGSEGV.  <br /></td></tr>
+<tr class="separator:a991365d9c487583b3b2055dec068e676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51f12bdff34db1628c56a82443462129" id="r_a51f12bdff34db1628c56a82443462129"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51f12bdff34db1628c56a82443462129">serverStateLogsThread</a> (void *arg)</td></tr>
+<tr class="memdesc:a51f12bdff34db1628c56a82443462129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread pour la gestion des logs globaux du serveur.  <br /></td></tr>
+<tr class="separator:a51f12bdff34db1628c56a82443462129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f1d3706c0d93487c08524544740042f" id="r_a1f1d3706c0d93487c08524544740042f"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f1d3706c0d93487c08524544740042f">clientInfoLogsThread</a> (void *arg)</td></tr>
+<tr class="memdesc:a1f1d3706c0d93487c08524544740042f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread pour la gestion des logs spécifiques à un client.  <br /></td></tr>
+<tr class="separator:a1f1d3706c0d93487c08524544740042f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acce96c2bfa51a05348f9a57ea1dfb5ca" id="r_acce96c2bfa51a05348f9a57ea1dfb5ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acce96c2bfa51a05348f9a57ea1dfb5ca">manageCreateRequest</a> (<a class="el" href="struct_request.html">Request</a> request, int serviceSocket, <a class="el" href="struct_shared_resources.html">SharedResources</a> *sharedResources)</td></tr>
+<tr class="memdesc:acce96c2bfa51a05348f9a57ea1dfb5ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gère une requête de création de philosophe.  <br /></td></tr>
+<tr class="separator:acce96c2bfa51a05348f9a57ea1dfb5ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf37f91c1c7694e7b2e7931690591709" id="r_adf37f91c1c7694e7b2e7931690591709"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf37f91c1c7694e7b2e7931690591709">manageUpdateRequest</a> (<a class="el" href="struct_request.html">Request</a> request, int serviceSocket, <a class="el" href="struct_shared_resources.html">SharedResources</a> *sharedResources)</td></tr>
+<tr class="memdesc:adf37f91c1c7694e7b2e7931690591709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gère une requête de mise à jour de l'état d'un philosophe.  <br /></td></tr>
+<tr class="separator:adf37f91c1c7694e7b2e7931690591709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f5454980a7c000fe64804babea69d6" id="r_a33f5454980a7c000fe64804babea69d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33f5454980a7c000fe64804babea69d6">clientProcess</a> (int serviceSocket, <a class="el" href="struct_shared_resources.html">SharedResources</a> *sharedResources)</td></tr>
+<tr class="memdesc:a33f5454980a7c000fe64804babea69d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processus client dédié.  <br /></td></tr>
+<tr class="separator:a33f5454980a7c000fe64804babea69d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97" id="r_a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction principale du serveur.  <br /></td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aec3112225bdaa3a5d854b0afe143e443" id="r_aec3112225bdaa3a5d854b0afe143e443"><td class="memItemLeft" align="right" valign="top">volatile sig_atomic_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec3112225bdaa3a5d854b0afe143e443">shutdownFlag</a> = 0</td></tr>
+<tr class="memdesc:aec3112225bdaa3a5d854b0afe143e443"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag global indiquant la demande d'arrêt du serveur.  <br /></td></tr>
+<tr class="separator:aec3112225bdaa3a5d854b0afe143e443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Point d'entrée du serveur. </p>
+<p>Ce fichier implémente le serveur principal de l'application, chargé de gérer les connexions clients, la synchronisation des ressources partagées et la communication inter-processuss. Le serveur utilise notamment :</p><ul>
+<li>Un segment de mémoire partagée pour stocker et partager l'état global des philosophes et des baguettes.</li>
+<li>Des sémaphores pour la synchronisation de l'accès aux ressources partagées (création de philosophes, accès aux baguettes, et limitation du nombre de philosophes pouvant manger simultanément).</li>
+<li>Une file de messages IPC pour la gestion asynchrone des logs (logs globaux du serveur et logs spécifiques aux clients).</li>
+</ul>
+<p>Les fonctionnalités principales de ce fichier comprennent :</p><ul>
+<li>L'initialisation des gestionnaires de signaux via <a class="el" href="#a991365d9c487583b3b2055dec068e676" title="Initialise les handlers pour les signaux SIGINT et SIGSEGV.">initEndSignals()</a> et le handler <a class="el" href="#a0c1699783bdad5f48bd36a6cb8fe040d" title="Handler de signal pour terminer le programme.">programEndHandler()</a>, afin de détecter les demandes d'arrêt (SIGINT) ou les erreurs critiques (SIGSEGV) et d'activer un flag de shutdown global.</li>
+<li>La gestion des logs via deux threads dédiés :<ul>
+<li><a class="el" href="#a51f12bdff34db1628c56a82443462129" title="Thread pour la gestion des logs globaux du serveur.">serverStateLogsThread()</a> : Lit les logs de type SERVER_LOG_TYPE depuis la file de messages et les écrit dans un fichier de log d'état du serveur, permettant de suivre l'activité globale.</li>
+<li><a class="el" href="#a1f1d3706c0d93487c08524544740042f" title="Thread pour la gestion des logs spécifiques à un client.">clientInfoLogsThread()</a> : Pour chaque client (processus fils), lit les logs spécifiques à ce client (identifiés par le PID) depuis la file de messages et les écrit dans un fichier dédié.</li>
+</ul>
+</li>
+<li>Le traitement des requêtes clients :<ul>
+<li><a class="el" href="#acce96c2bfa51a05348f9a57ea1dfb5ca" title="Gère une requête de création de philosophe.">manageCreateRequest()</a> : Gère les requêtes de création de philosophes (REQUEST_CREATE) en créant un nouveau philosophe côté serveur et en renvoyant une réponse (RESPONSE_CREATE) au client.</li>
+<li><a class="el" href="#adf37f91c1c7694e7b2e7931690591709" title="Gère une requête de mise à jour de l&#39;état d&#39;un philosophe.">manageUpdateRequest()</a> : Gère les requêtes de mise à jour de l'état d'un philosophe (REQUEST_UPDATE) et envoie une réponse (RESPONSE_UPDATE) correspondante.</li>
+</ul>
+</li>
+<li>La gestion d'un processus client via <a class="el" href="#a33f5454980a7c000fe64804babea69d6" title="Processus client dédié.">clientProcess()</a>, qui :<ul>
+<li>Initialise le générateur de nombres aléatoires.</li>
+<li>Attend et traite les requêtes envoyées par le client sur son socket de service.</li>
+<li>Réagit aux différentes demandes (création ou mise à jour) et communique les réponses appropriées.</li>
+</ul>
+</li>
+<li>La boucle principale du serveur dans <a class="el" href="#a0ddf1224851353fc92bfbff6f499fa97" title="Fonction principale du serveur.">main()</a>, qui effectue les opérations suivantes :<ul>
+<li>Vérifie la compatibilité avec le nombre maximal de fichiers ouverts (FOPEN_MAX) et avertit si nécessaire.</li>
+<li>Crée et attache un segment de mémoire partagée pour héberger les ressources partagées (philosophes, baguettes, logs, etc.).</li>
+<li>Initialise et configure le socket serveur (création, binding, écoute).</li>
+<li>Crée la file de messages pour la gestion des logs.</li>
+<li>Configure le <a class="el" href="struct_server_context.html" title="Structure regroupant les ressources et informations du serveur.">ServerContext</a> pour centraliser la gestion des ressources (sockets, mémoire partagée, logs).</li>
+<li>Lance un thread pour le log global du serveur.</li>
+<li>Entre dans une boucle d'acceptation des connexions clients, et pour chaque connexion :<ul>
+<li>Accepte la connexion sur le socket de service.</li>
+<li>Crée un processus fils via fork() pour gérer le client avec <a class="el" href="#a33f5454980a7c000fe64804babea69d6" title="Processus client dédié.">clientProcess()</a>.</li>
+<li>Dans le processus parent, ouvre un thread de logs dédié pour le nouveau client et met à jour le contexte serveur.</li>
+</ul>
+</li>
+<li>Sur détection d'une demande d'arrêt (shutdownFlag), procède à un nettoyage global des ressources via <a class="el" href="_server_context_8c.html#a0d9c08a111d76a98fdac900cbfec990f" title="Nettoie et libère les ressources associées au serveur.">cleanup()</a> avant de terminer.</li>
+</ul>
+</li>
+</ul>
+<p>Les modules utilisés dans ce fichier proviennent de divers fichiers d'en-tête et d'implémentation, notamment :</p><ul>
+<li>Utilitaires : <a class="el" href="sockets_8h.html" title="Définit des fonctions et macros pour la gestion des sockets réseau.">sockets.h</a>, <a class="el" href="print__message_8h.html" title="Définit des fonctions pour l&#39;affichage de messages colorés sur la console.">print_message.h</a>, <a class="el" href="random_8h.html" title="Fournit des fonctions pour l&#39;initialisation du générateur de nombres aléatoires et la génération de n...">random.h</a>, <a class="el" href="files_8h.html" title="Définit des fonctions utilitaires pour la gestion des fichiers et du tampon d&#39;entrée standard.">files.h</a>.</li>
+<li>Gestion des ressources partagées et des logs : <a class="el" href="_logs_8c.html" title="Implémente les fonctions de gestion des logs et des chemins des fichiers de log.">Logs.c</a>, <a class="el" href="_shared_resources_8c.html" title="Implémente la fonction d&#39;attachement et d&#39;initialisation des ressources partagées.">SharedResources.c</a>, <a class="el" href="_server_philosopher_8c.html" title="Implémente les fonctions de gestion des philosophes côté serveur.">ServerPhilosopher.c</a>, <a class="el" href="_request_8c.html" title="Implémente les fonctions de création des requêtes adressées au serveur.">Request.c</a>, <a class="el" href="_response_8c.html" title="Implémente les fonctions de création des réponses envoyées par le serveur.">Response.c</a>, <a class="el" href="_server_context_8c.html" title="Implémente les fonctions de gestion du contexte serveur.">ServerContext.c</a>.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Ce fichier constitue le cœur du serveur, orchestrant la communication entre les clients et la gestion centralisée des ressources partagées, tout en assurant une synchronisation fine. </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a1f1d3706c0d93487c08524544740042f" name="a1f1d3706c0d93487c08524544740042f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f1d3706c0d93487c08524544740042f">&#9670;&#160;</a></span>clientInfoLogsThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * clientInfoLogsThread </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>arg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Thread pour la gestion des logs spécifiques à un client. </p>
+<p>Cette routine lit en boucle les messages de log destinés à un client (identifiés par son PID) depuis la file de messages IPC et les écrit dans un fichier de log dédié. La boucle s'exécute tant que shutdownFlag n'est pas activé.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>Pointeur vers une structure <a class="el" href="struct_log_thread_info.html" title="Structure contenant les informations du thread de gestion des logs des processus de service.">LogThreadInfo</a> contenant l'identifiant de la file de messages et le PID du client. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>void* Retourne toujours NULL. </dd></dl>
+
+</div>
+</div>
+<a id="a33f5454980a7c000fe64804babea69d6" name="a33f5454980a7c000fe64804babea69d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33f5454980a7c000fe64804babea69d6">&#9670;&#160;</a></span>clientProcess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clientProcess </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>serviceSocket</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_shared_resources.html">SharedResources</a> *</td>          <td class="paramname"><span class="paramname"><em>sharedResources</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Processus client dédié. </p>
+<p>Cette fonction est exécutée par le processus fils créé pour chaque client. Elle initialise le générateur de nombres aléatoires, puis entre dans une boucle pour lire et traiter les requêtes envoyées par le client via son socket de service. Selon le type de requête (création ou mise à jour), elle appelle la fonction appropriée pour traiter la demande. En cas d'erreur ou de déconnexion du client, le processus termine en déclenchant un arrêt contrôlé.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">serviceSocket</td><td><a class="el" href="struct_socket.html" title="Structure représentant une socket.">Socket</a> de service associé à la connexion client. </td></tr>
+    <tr><td class="paramname">sharedResources</td><td>Pointeur vers les ressources partagées. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a991365d9c487583b3b2055dec068e676" name="a991365d9c487583b3b2055dec068e676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a991365d9c487583b3b2055dec068e676">&#9670;&#160;</a></span>initEndSignals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initEndSignals </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise les handlers pour les signaux SIGINT et SIGSEGV. </p>
+<p>Configure le handler programEndHandler pour SIGINT et SIGSEGV. En cas d'échec de l'installation du handler, un message d'erreur est affiché et le programme se termine. </p>
+
+</div>
+</div>
+<a id="a0ddf1224851353fc92bfbff6f499fa97" name="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>[]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction principale du serveur. </p>
+<p>La fonction main :</p><ul>
+<li>initialise les signaux de fin,</li>
+<li>crée la mémoire partagée,</li>
+<li>configure le socket serveur</li>
+<li>configure la file de messages pour les logs</li>
+<li>centralise les ressources dans un <a class="el" href="struct_server_context.html" title="Structure regroupant les ressources et informations du serveur.">ServerContext</a></li>
+<li>lance ensuite un thread pour la gestion globale des logs du serveur</li>
+<li>entre dans une boucle d'acceptation des connexions clients.</li>
+</ul>
+<p>Pour chaque connexion acceptée :</p><ul>
+<li>un processus fils est créé pour traiter les requêtes du client (via <a class="el" href="#a33f5454980a7c000fe64804babea69d6" title="Processus client dédié.">clientProcess()</a>),</li>
+<li>le processus parent crée un thread dédié pour gérer les logs spécifiques au client.</li>
+</ul>
+<p>En cas d'arrêt (shutdownFlag activé), le serveur procède au nettoyage global des ressources avant de terminer.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>Nombre d'arguments en ligne de commande. </td></tr>
+    <tr><td class="paramname">argv</td><td>Tableau des arguments en ligne de commande. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>int Code de sortie (0 en cas de succès). </dd></dl>
+
+</div>
+</div>
+<a id="acce96c2bfa51a05348f9a57ea1dfb5ca" name="acce96c2bfa51a05348f9a57ea1dfb5ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acce96c2bfa51a05348f9a57ea1dfb5ca">&#9670;&#160;</a></span>manageCreateRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void manageCreateRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_request.html">Request</a></td>          <td class="paramname"><span class="paramname"><em>request</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>serviceSocket</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_shared_resources.html">SharedResources</a> *</td>          <td class="paramname"><span class="paramname"><em>sharedResources</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gère une requête de création de philosophe. </p>
+<p>Lorsqu'une requête de création (REQUEST_CREATE) est reçue, cette fonction crée un nouveau philosophe côté serveur en appelant <a class="el" href="_server_philosopher_8c.html#af9e50c1de00e8b4aa629038253b67cbc" title="Crée un philosophe côté serveur.">createPhilosopher()</a>, prépare une réponse (RESPONSE_CREATE) avec les informations du philosophe, et envoie cette réponse au client via le socket de service. En cas d'erreur lors de l'envoi, le serveur déclenche un arrêt contrôlé.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>Requête de création reçue du client. </td></tr>
+    <tr><td class="paramname">serviceSocket</td><td><a class="el" href="struct_socket.html" title="Structure représentant une socket.">Socket</a> de service associé à la connexion client. </td></tr>
+    <tr><td class="paramname">sharedResources</td><td>Pointeur vers les ressources partagées. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adf37f91c1c7694e7b2e7931690591709" name="adf37f91c1c7694e7b2e7931690591709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf37f91c1c7694e7b2e7931690591709">&#9670;&#160;</a></span>manageUpdateRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void manageUpdateRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_request.html">Request</a></td>          <td class="paramname"><span class="paramname"><em>request</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>serviceSocket</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_shared_resources.html">SharedResources</a> *</td>          <td class="paramname"><span class="paramname"><em>sharedResources</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gère une requête de mise à jour de l'état d'un philosophe. </p>
+<p>Cette fonction traite une requête de mise à jour (REQUEST_UPDATE) en appelant <a class="el" href="_server_philosopher_8c.html#a67648dd0c4f1c2b34fcf0d569a888883" title="Met à jour l&#39;état d&#39;un philosophe côté serveur.">updatePhilosopher()</a> pour mettre à jour l'état du philosophe côté serveur. Si la mise à jour aboutit, une réponse (RESPONSE_UPDATE) est envoyée au client. En cas d'échec d'envoi, le serveur déclenche un arrêt contrôlé.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>Requête de mise à jour reçue du client. </td></tr>
+    <tr><td class="paramname">serviceSocket</td><td><a class="el" href="struct_socket.html" title="Structure représentant une socket.">Socket</a> de service associé à la connexion client. </td></tr>
+    <tr><td class="paramname">sharedResources</td><td>Pointeur vers les ressources partagées. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0c1699783bdad5f48bd36a6cb8fe040d" name="a0c1699783bdad5f48bd36a6cb8fe040d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c1699783bdad5f48bd36a6cb8fe040d">&#9670;&#160;</a></span>programEndHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void programEndHandler </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>signum</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handler de signal pour terminer le programme. </p>
+<p>Cette fonction est appelée lorsqu'un signal d'arrêt (SIGINT, SIGSEGV) est reçu. Elle met à jour le flag global shutdownFlag pour indiquer qu'un arrêt est demandé.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">signum</td><td>Numéro du signal reçu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a51f12bdff34db1628c56a82443462129" name="a51f12bdff34db1628c56a82443462129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51f12bdff34db1628c56a82443462129">&#9670;&#160;</a></span>serverStateLogsThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * serverStateLogsThread </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>arg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Thread pour la gestion des logs globaux du serveur. </p>
+<p>Cette routine lit en boucle les messages de log de type SERVER_LOG_TYPE depuis la file de messages IPC et les écrit dans un fichier de log d'état du serveur. La lecture continue tant que shutdownFlag n'est pas activé.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>Pointeur vers l'identifiant de la file de messages (logsQueueId). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>void* Retourne toujours NULL. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="aec3112225bdaa3a5d854b0afe143e443" name="aec3112225bdaa3a5d854b0afe143e443"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec3112225bdaa3a5d854b0afe143e443">&#9670;&#160;</a></span>shutdownFlag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile sig_atomic_t shutdownFlag = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag global indiquant la demande d'arrêt du serveur. </p>
+<p>Ce flag est modifié par le handler de signal pour stopper les boucles principales et les threads, permettant ainsi un arrêt contrôlé du serveur. Car impossible de donner <a class="el" href="struct_server_context.html" title="Structure regroupant les ressources et informations du serveur.">ServerContext</a> au handler du signal : <a href="https://stackoverflow.com/questions/6970224/providing-passing-argument-to-signal-handler">https://stackoverflow.com/questions/6970224/providing-passing-argument-to-signal-handler</a> </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="server_8c.html">server.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

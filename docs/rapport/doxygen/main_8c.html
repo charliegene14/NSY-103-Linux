@@ -1,0 +1,303 @@
+<!-- HTML header for doxygen 1.13.2-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NSY103 - DENIER Charlie: Référence du fichier src/main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">NSY103 - DENIER Charlie
+   </div>
+   <div id="projectbrief">Documentation technique du projet du module NSY103, le problème des philosophes.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('main_8c.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier main.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Point d'entrée de l'application client pour le problème des philosophes.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="maxmin__philosophers_8h_source.html">../include/maxmin_philosophers.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="print__message_8h_source.html">../include/utils/print_message.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="files_8h_source.html">../include/utils/files.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="sockets_8h_source.html">../include/utils/sockets.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="commands_8h_source.html">../include/utils/commands.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="random_8h_source.html">../include/utils/random.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_client_philosopher_8h_source.html">../include/entities/ClientPhilosopher.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_request_8c_source.html">../include/managers/Request.c</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_response_8c_source.html">../include/managers/Response.c</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a2463a3acef2df4c951ce942a3229e44e" id="r_a2463a3acef2df4c951ce942a3229e44e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2463a3acef2df4c951ce942a3229e44e">quit</a> ()</td></tr>
+<tr class="memdesc:a2463a3acef2df4c951ce942a3229e44e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quitte le programme en affichant un message d'information.  <br /></td></tr>
+<tr class="separator:a2463a3acef2df4c951ce942a3229e44e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a842b8f70601199802e7427f41f26825d" id="r_a842b8f70601199802e7427f41f26825d"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a842b8f70601199802e7427f41f26825d">philosopherThread</a> (void *arg)</td></tr>
+<tr class="memdesc:a842b8f70601199802e7427f41f26825d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Routine du thread associé à chaque philosophe.  <br /></td></tr>
+<tr class="separator:a842b8f70601199802e7427f41f26825d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75411697ac90feaa3902bcd66797209c" id="r_a75411697ac90feaa3902bcd66797209c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75411697ac90feaa3902bcd66797209c">addPhilosophers</a> (int number, int *currentNumber, <a class="el" href="struct_client_philosopher.html">ClientPhilosopher</a> *philosophers)</td></tr>
+<tr class="memdesc:a75411697ac90feaa3902bcd66797209c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute des philosophes côté client et crée leur thread associé.  <br /></td></tr>
+<tr class="separator:a75411697ac90feaa3902bcd66797209c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97" id="r_a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction principale du client.  <br /></td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Point d'entrée de l'application client pour le problème des philosophes. </p>
+<p>Ce fichier implémente la logique principale de l'application client. Il gère la connexion au serveur, la création des philosophes côté client, la communication avec le serveur via des sockets, ainsi que la gestion des commandes de l'utilisateur permettant d'ajouter des philosophes ou de quitter l'application.</p>
+<p>Les inclusions dans ce fichier fournissent les définitions nécessaires pour :</p><ul>
+<li>Les macros du nombre min et max de philosophes (<a class="el" href="maxmin__philosophers_8h.html" title="Définit les macros de configuration pour le nombre de philosophes et les temps d&#39;état.">maxmin_philosophers.h</a>).</li>
+<li>L'affichage de messages sur la console (<a class="el" href="print__message_8h.html" title="Définit des fonctions pour l&#39;affichage de messages colorés sur la console.">print_message.h</a>).</li>
+<li>La gestion des fichiers, sockets et commandes (<a class="el" href="files_8h.html" title="Définit des fonctions utilitaires pour la gestion des fichiers et du tampon d&#39;entrée standard.">files.h</a>, <a class="el" href="sockets_8h.html" title="Définit des fonctions et macros pour la gestion des sockets réseau.">sockets.h</a>, <a class="el" href="commands_8h.html" title="Définit les macros et fonctions pour le traitement des commandes utilisateur.">commands.h</a>).</li>
+<li>La génération de nombres aléatoires (<a class="el" href="random_8h.html" title="Fournit des fonctions pour l&#39;initialisation du générateur de nombres aléatoires et la génération de n...">random.h</a>).</li>
+<li>La définition de la structure <code><a class="el" href="struct_client_philosopher.html" title="Structure représentant un philosophe côté client.">ClientPhilosopher</a></code> qui représente un philosophe côté client.</li>
+<li>L'implémentation des fonctions de requêtes et de réponses (<a class="el" href="_request_8c.html" title="Implémente les fonctions de création des requêtes adressées au serveur.">Request.c</a> et <a class="el" href="_response_8c.html" title="Implémente les fonctions de création des réponses envoyées par le serveur.">Response.c</a>).</li>
+<li>Les bibliothèques standard pour les opérations d'entrée/sortie, la gestion des threads et des erreurs.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Ce fichier utilise une boucle infinie pour permettre à l'utilisateur d'ajouter dynamiquement des philosophes et de gérer leur cycle de vie via des threads. </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a75411697ac90feaa3902bcd66797209c" name="a75411697ac90feaa3902bcd66797209c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75411697ac90feaa3902bcd66797209c">&#9670;&#160;</a></span>addPhilosophers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addPhilosophers </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>number</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>currentNumber</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_client_philosopher.html">ClientPhilosopher</a> *</td>          <td class="paramname"><span class="paramname"><em>philosophers</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ajoute des philosophes côté client et crée leur thread associé. </p>
+<p>Cette fonction permet d'ajouter un nombre spécifié de philosophes. Pour chaque philosophe :</p><ul>
+<li>Un nouveau socket client est créé et une connexion au serveur est établie.</li>
+<li>Une requête de création de philosophe est envoyée au serveur.</li>
+<li>Le client reçoit en réponse les informations initiales du philosophe (identifiant, état, timer).</li>
+<li>Le philosophe est ajouté à la liste locale des philosophes et son état est initialisé.</li>
+<li>Un thread est créé pour gérer le cycle de vie du philosophe via la fonction <code>philosopherThread</code>.</li>
+</ul>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">number</td><td>Nombre de philosophes à ajouter. </td></tr>
+    <tr><td class="paramname">currentNumber</td><td>Pointeur vers le compteur actuel de philosophes. </td></tr>
+    <tr><td class="paramname">philosophers</td><td>Tableau de structures <code><a class="el" href="struct_client_philosopher.html" title="Structure représentant un philosophe côté client.">ClientPhilosopher</a></code> où les nouveaux philosophes seront ajoutés. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0ddf1224851353fc92bfbff6f499fa97" name="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>[]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction principale du client. </p>
+<p>La fonction main initialise les variables nécessaires et entre dans une boucle infinie permettant à l'utilisateur d'ajouter dynamiquement des philosophes via des commandes saisies au clavier. Pour chaque ajout, la fonction vérifie la validité de la commande, détermine le nombre de philosophes à ajouter, et appelle la fonction <code>addPhilosophers</code> pour créer et connecter les nouveaux philosophes.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>Nombre d'arguments passés en ligne de commande. </td></tr>
+    <tr><td class="paramname">argv</td><td>Tableau des arguments passés en ligne de commande. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>int Retourne 0 lors de la terminaison normale du programme. </dd></dl>
+
+</div>
+</div>
+<a id="a842b8f70601199802e7427f41f26825d" name="a842b8f70601199802e7427f41f26825d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a842b8f70601199802e7427f41f26825d">&#9670;&#160;</a></span>philosopherThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * philosopherThread </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>arg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Routine du thread associé à chaque philosophe. </p>
+<p>Cette fonction représente le comportement d'un philosophe côté client. Elle exécute en boucle les étapes suivantes :</p><ul>
+<li>Réduit le timer associé à l'état courant du philosophe.</li>
+<li>Lorsque le timer atteint zéro, le philosophe change d'état :<ul>
+<li>S'il était en train de penser, il passe à l'état HUNGRY.</li>
+<li>S'il était en train de manger, il passe à l'état THINKING et un nouveau timer est assigné.</li>
+<li>En cas d'état inconnu, un message d'erreur est affiché et le programme se termine.</li>
+</ul>
+</li>
+<li>Envoie une requête de mise à jour de l'état du philosophe au serveur via un socket.</li>
+<li>Si le philosophe est en état HUNGRY, il attend la réponse du serveur qui lui accorde l'autorisation de manger.</li>
+<li>Une fois la réponse reçue, il met à jour son état et réinitialise le timer.</li>
+</ul>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>Pointeur vers la structure <code><a class="el" href="struct_client_philosopher.html" title="Structure représentant un philosophe côté client.">ClientPhilosopher</a></code> représentant le philosophe concerné. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>void* Toujours retourne NULL à la fin de l'exécution du thread. </dd></dl>
+
+</div>
+</div>
+<a id="a2463a3acef2df4c951ce942a3229e44e" name="a2463a3acef2df4c951ce942a3229e44e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2463a3acef2df4c951ce942a3229e44e">&#9670;&#160;</a></span>quit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void quit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Quitte le programme en affichant un message d'information. </p>
+<p>Cette fonction affiche un message indiquant la fermeture du programme et des clients, puis termine l'exécution de l'application en appelant exit().</p>
+<p>En cas de coupure, les sockets se fermeront et le serveur sera immédiatement notifié. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="main_8c.html">main.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['server_2ec_0',['server.c',['../server_8c.html',1,'']]],
+  ['server_5flog_5ftype_1',['SERVER_LOG_TYPE',['../_logs_8h.html#ad7cd1d55d03a72563a5e83d95428ec28',1,'Logs.h']]],
+  ['server_5fstate_5fpath_2',['SERVER_STATE_PATH',['../_logs_8h.html#a3ba94de49faa39821a05292b80400e5e',1,'Logs.h']]],
+  ['servercontext_3',['ServerContext',['../struct_server_context.html',1,'']]],
+  ['servercontext_2ec_4',['ServerContext.c',['../_server_context_8c.html',1,'']]],
+  ['servercontext_2eh_5',['ServerContext.h',['../_server_context_8h.html',1,'']]],
+  ['serverphilosopher_6',['ServerPhilosopher',['../struct_server_philosopher.html',1,'']]],
+  ['serverphilosopher_2ec_7',['ServerPhilosopher.c',['../_server_philosopher_8c.html',1,'']]],
+  ['serverphilosopher_2eh_8',['ServerPhilosopher.h',['../_server_philosopher_8h.html',1,'']]],
+  ['serversocket_9',['serverSocket',['../struct_server_context.html#a6c356fe0647193fa4e7b6256ff088da5',1,'ServerContext']]],
+  ['serverstatelogsthread_10',['serverStateLogsThread',['../server_8c.html#a51f12bdff34db1628c56a82443462129',1,'server.c']]],
+  ['servicesockets_11',['serviceSockets',['../struct_server_context.html#af86425acfda191e086396bc498724635',1,'ServerContext']]],
+  ['sharedresources_12',['SharedResources',['../struct_shared_resources.html',1,'']]],
+  ['sharedresources_13',['sharedResources',['../struct_server_context.html#a36f6f6a95e86fc7d512687656f8af134',1,'ServerContext']]],
+  ['sharedresources_2ec_14',['SharedResources.c',['../_shared_resources_8c.html',1,'']]],
+  ['sharedresources_2eh_15',['SharedResources.h',['../_shared_resources_8h.html',1,'']]],
+  ['sharedresourcesmemoryid_16',['sharedResourcesMemoryId',['../struct_server_context.html#a1120f24e903478c209307df905434c07',1,'ServerContext']]],
+  ['shutdownflag_17',['shutdownFlag',['../server_8c.html#aec3112225bdaa3a5d854b0afe143e443',1,'server.c']]],
+  ['socket_18',['Socket',['../struct_socket.html',1,'']]],
+  ['sockets_2eh_19',['sockets.h',['../sockets_8h.html',1,'']]],
+  ['state_20',['state',['../struct_philosopher.html#a91d97b92203165e1327a90f24f5bff69',1,'Philosopher']]],
+  ['statetimer_21',['stateTimer',['../struct_philosopher.html#ae3c306a0a83c7421cdd1662a5728c9ae',1,'Philosopher']]]
+];

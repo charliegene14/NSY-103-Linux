@@ -1,0 +1,220 @@
+<!-- HTML header for doxygen 1.13.2-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NSY103 - DENIER Charlie: Référence du fichier include/managers/ServerContext.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">NSY103 - DENIER Charlie
+   </div>
+   <div id="projectbrief">Documentation technique du projet du module NSY103, le problème des philosophes.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_server_context_8c.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier ServerContext.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implémente les fonctions de gestion du contexte serveur.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="maxmin__philosophers_8h_source.html">../maxmin_philosophers.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_server_context_8h_source.html">../entities/ServerContext.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="print__message_8h_source.html">../utils/print_message.h</a>&quot;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;sys/shm.h&gt;</code><br />
+<code>#include &lt;sys/msg.h&gt;</code><br />
+<code>#include &lt;signal.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div>
+<p><a href="_server_context_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a46afa8d9005578ba996229f966e77d59" id="r_a46afa8d9005578ba996229f966e77d59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_server_context.html">ServerContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46afa8d9005578ba996229f966e77d59">initServerContext</a> ()</td></tr>
+<tr class="memdesc:a46afa8d9005578ba996229f966e77d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise le contexte serveur.  <br /></td></tr>
+<tr class="separator:a46afa8d9005578ba996229f966e77d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d9c08a111d76a98fdac900cbfec990f" id="r_a0d9c08a111d76a98fdac900cbfec990f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d9c08a111d76a98fdac900cbfec990f">cleanup</a> (<a class="el" href="struct_server_context.html">ServerContext</a> *serverContext)</td></tr>
+<tr class="memdesc:a0d9c08a111d76a98fdac900cbfec990f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nettoie et libère les ressources associées au serveur.  <br /></td></tr>
+<tr class="separator:a0d9c08a111d76a98fdac900cbfec990f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Implémente les fonctions de gestion du contexte serveur. </p>
+<p>Ce fichier d'implémentation fournit deux fonctions essentielles pour la gestion des ressources du serveur :</p><ul>
+<li><b><a class="el" href="#a46afa8d9005578ba996229f966e77d59" title="Initialise le contexte serveur.">initServerContext()</a></b> : Initialise une structure <code><a class="el" href="struct_server_context.html" title="Structure regroupant les ressources et informations du serveur.">ServerContext</a></code> en mettant à zéro ses champs et en définissant des valeurs initiales par défaut.</li>
+<li><b><a class="el" href="#a0d9c08a111d76a98fdac900cbfec990f" title="Nettoie et libère les ressources associées au serveur.">cleanup(ServerContext *serverContext)</a></b> : Libère et nettoie toutes les ressources utilisées par le serveur, incluant les sockets, la mémoire partagée, les sémaphores, et la file de messages IPC pour les logs.</li>
+</ul>
+<p>Les inclusions nécessaires dans ce fichier sont :</p><ul>
+<li>"../maxmin_philosophers.h" pour la définition des constantes globales.</li>
+<li>"../entities/ServerContext.h" pour la définition de la structure <code><a class="el" href="struct_server_context.html" title="Structure regroupant les ressources et informations du serveur.">ServerContext</a></code>.</li>
+<li>"../utils/print_message.h" pour l'affichage de messages d'information et de succès.</li>
+<li>&lt;unistd.h&gt;, &lt;sys/shm.h&gt;, &lt;sys/msg.h&gt;, &lt;signal.h&gt;, et &lt;string.h&gt; pour diverses fonctions systèmes.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Ces fonctions sont essentielles pour assurer une gestion propre des ressources lors du démarrage et de l'arrêt du serveur. </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a0d9c08a111d76a98fdac900cbfec990f" name="a0d9c08a111d76a98fdac900cbfec990f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d9c08a111d76a98fdac900cbfec990f">&#9670;&#160;</a></span>cleanup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cleanup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_server_context.html">ServerContext</a> *</td>          <td class="paramname"><span class="paramname"><em>serverContext</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Nettoie et libère les ressources associées au serveur. </p>
+<p>Cette fonction effectue les opérations de nettoyage suivantes :</p><ul>
+<li>Affiche un message indiquant le début du nettoyage.</li>
+<li>Termine tous les processus de service en envoyant un signal SIGKILL à chacun des PID stockés.</li>
+<li>Ferme le socket principal du serveur s'il est ouvert.</li>
+<li>Ferme tous les sockets de service.</li>
+<li>Supprime la file de messages IPC utilisée pour les logs.</li>
+<li>Détruit les sémaphores utilisés pour la synchronisation dans la mémoire partagée, y compris ceux des baguettes.</li>
+<li>Détache la mémoire partagée et libère le segment de mémoire.</li>
+</ul>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">serverContext</td><td>Pointeur vers la structure <code><a class="el" href="struct_server_context.html" title="Structure regroupant les ressources et informations du serveur.">ServerContext</a></code> contenant les ressources à nettoyer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a46afa8d9005578ba996229f966e77d59" name="a46afa8d9005578ba996229f966e77d59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46afa8d9005578ba996229f966e77d59">&#9670;&#160;</a></span>initServerContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_server_context.html">ServerContext</a> initServerContext </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise le contexte serveur. </p>
+<p>Cette fonction crée et initialise une structure <code><a class="el" href="struct_server_context.html" title="Structure regroupant les ressources et informations du serveur.">ServerContext</a></code> en mettant à zéro l'ensemble de ses champs à l'aide de <code>memset</code>. Les valeurs initiales suivantes sont définies :</p><ul>
+<li><code>serverSocket</code> est initialisé à -1 car socket() retourne -1 en cas d'erreur</li>
+<li><code>sharedResourcesMemoryId</code> est initialisé à -1 car shmget() retourne -1 en cas d'erreur</li>
+<li><code>numberServiceSockets</code> et <code>numberClients</code> sont initialisés à 0.</li>
+</ul>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="struct_server_context.html" title="Structure regroupant les ressources et informations du serveur.">ServerContext</a> Le contexte serveur initialisé. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_3b632b175d4850e946ee3ba45d8d1f8d.html">managers</a></li><li class="navelem"><a class="el" href="_server_context_8c.html">ServerContext.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!-- HTML header for doxygen 1.13.2-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NSY103 - DENIER Charlie: Référence du fichier include/managers/SharedResources.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">NSY103 - DENIER Charlie
+   </div>
+   <div id="projectbrief">Documentation technique du projet du module NSY103, le problème des philosophes.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_shared_resources_8c.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier SharedResources.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implémente la fonction d'attachement et d'initialisation des ressources partagées.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_shared_resources_8h_source.html">../entities/SharedResources.h</a>&quot;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;sys/shm.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div>
+<p><a href="_shared_resources_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:af309af741de924f951c36dac13c8969b" id="r_af309af741de924f951c36dac13c8969b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_shared_resources.html">SharedResources</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af309af741de924f951c36dac13c8969b">attachSharedResources</a> (int sharedResourcesMemoryId)</td></tr>
+<tr class="memdesc:af309af741de924f951c36dac13c8969b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attache et initialise les ressources partagées.  <br /></td></tr>
+<tr class="separator:af309af741de924f951c36dac13c8969b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Implémente la fonction d'attachement et d'initialisation des ressources partagées. </p>
+<p>Ce fichier d'implémentation fournit la fonction <code>attachSharedResources</code> qui permet d'attacher un segment de mémoire partagée contenant la structure <code><a class="el" href="struct_shared_resources.html" title="Structure regroupant les ressources partagées du serveur.">SharedResources</a></code> et d'initialiser ses champs aux valeurs par défaut.</p>
+<p>La fonction effectue les opérations suivantes :</p><ul>
+<li>Attache le segment de mémoire partagée identifié par <code>sharedResourcesMemoryId</code> en utilisant <code>shmat</code>.</li>
+<li>Initialise le sémaphore <code>maxAllowedEating</code> à 0, limitant ainsi initialement le nombre de philosophes pouvant manger simultanément.</li>
+<li>Initialise le sémaphore <code>philosopherCreationProcess</code> à 1, afin de sécuriser la création concurrente des philosophes.</li>
+<li>Réinitialise les compteurs de philosophes (<code>numberPhilosophers</code>) et de baguettes (<code>numberChopsticks</code>) à 0.</li>
+<li>Initialise l'identifiant de la file de logs (<code>logsQueueId</code>) à 0.</li>
+</ul>
+<p>Les inclusions nécessaires dans ce fichier sont :</p><ul>
+<li>"../entities/SharedResources.h" pour la définition de la structure <code><a class="el" href="struct_shared_resources.html" title="Structure regroupant les ressources partagées du serveur.">SharedResources</a></code>.</li>
+<li>&lt;stdlib.h&gt; pour les fonctions de la bibliothèque standard.</li>
+<li>&lt;math.h&gt; pour les fonctions mathématiques (bien que non utilisées directement dans cette fonction).</li>
+<li>&lt;sys/shm.h&gt; pour la gestion de la mémoire partagée.</li>
+<li>&lt;string.h&gt; pour les opérations sur la mémoire. </li>
+</ul>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="af309af741de924f951c36dac13c8969b" name="af309af741de924f951c36dac13c8969b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af309af741de924f951c36dac13c8969b">&#9670;&#160;</a></span>attachSharedResources()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_shared_resources.html">SharedResources</a> * attachSharedResources </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sharedResourcesMemoryId</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Attache et initialise les ressources partagées. </p>
+<p>Cette fonction attache un segment de mémoire partagée identifié par <code>sharedResourcesMemoryId</code> et retourne un pointeur vers une structure <code><a class="el" href="struct_shared_resources.html" title="Structure regroupant les ressources partagées du serveur.">SharedResources</a></code>. Elle initialise ensuite les sémaphores et compteurs de la structure afin de préparer l'utilisation des ressources partagées par l'application.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sharedResourcesMemoryId</td><td>L'identifiant du segment de mémoire partagée. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>SharedResources* Pointeur vers la structure <code><a class="el" href="struct_shared_resources.html" title="Structure regroupant les ressources partagées du serveur.">SharedResources</a></code> attachée.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Cette fonction doit être appelée après la création du segment de mémoire partagée. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_3b632b175d4850e946ee3ba45d8d1f8d.html">managers</a></li><li class="navelem"><a class="el" href="_shared_resources_8c.html">SharedResources.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

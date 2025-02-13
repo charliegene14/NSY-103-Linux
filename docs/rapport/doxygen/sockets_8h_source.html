@@ -1,0 +1,216 @@
+<!-- HTML header for doxygen 1.13.2-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NSY103 - DENIER Charlie:  Fichier source de include/utils/sockets.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">NSY103 - DENIER Charlie
+   </div>
+   <div id="projectbrief">Documentation technique du projet du module NSY103, le problème des philosophes.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('sockets_8h_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">sockets.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="sockets_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef SOCKETS_H</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define SOCKETS_H</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;sys/socket.h&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;netinet/in.h&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;arpa/inet.h&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define PORT 9002</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#define ADDRESS &quot;127.0.0.1&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#define SOCKET_FAMILY AF_INET</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define SOCKET_TYPE SOCK_STREAM</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define MAX_ATTEMPTS 5</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_socket.html">   39</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">int</span> socket;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">struct </span>sockaddr_in socketAddress;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>} <a class="code hl_struct" href="struct_socket.html">Socket</a>;</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="sockets_8h.html#a4ebf1ee87f13cfff76001f1eeb337461">   52</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="sockets_8h.html#a4ebf1ee87f13cfff76001f1eeb337461">getSocket</a>() {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">return</span> socket(SOCKET_FAMILY, SOCKET_TYPE, 0);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="sockets_8h.html#ac19d633c992a34a13c3f98f441369ec8">   63</a></span><span class="keyword">struct </span>in_addr <a class="code hl_function" href="sockets_8h.html#ac19d633c992a34a13c3f98f441369ec8">getServerAddress</a>() {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">struct </span>in_addr serverAdress;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    serverAdress.s_addr = inet_addr(ADDRESS);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">return</span> serverAdress;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span></div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="sockets_8h.html#a2bf1aa32ae34baacb6050b8bcea9d9d4">   79</a></span><span class="keyword">struct </span>sockaddr_in <a class="code hl_function" href="sockets_8h.html#a2bf1aa32ae34baacb6050b8bcea9d9d4">getSocketAddress</a>() {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">struct </span>sockaddr_in socketAddress;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    socketAddress.sin_family = SOCKET_FAMILY;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    socketAddress.sin_port = htons(PORT);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    socketAddress.sin_addr = <a class="code hl_function" href="sockets_8h.html#ac19d633c992a34a13c3f98f441369ec8">getServerAddress</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">return</span> socketAddress;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
+<div class="foldopen" id="foldopen00101" data-start="{" data-end="}">
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="sockets_8h.html#add3a664847b2b67a315126936c7d3e7a">  101</a></span>ssize_t <a class="code hl_function" href="sockets_8h.html#add3a664847b2b67a315126936c7d3e7a">trySocketRead</a>(<span class="keywordtype">int</span> socket, <span class="keywordtype">void</span> *data, <span class="keywordtype">size_t</span> dataSize) {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordtype">int</span> attemptsLeft = MAX_ATTEMPTS;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    ssize_t bytesReceived;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> attempt = 0; attempt &lt; MAX_ATTEMPTS; attempt++) {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="comment">// Gestion des différentes requêtes possible</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        bytesReceived = read(socket, data, dataSize);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">if</span> (bytesReceived != -1) {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">return</span> bytesReceived;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>}</div>
+</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span></div>
+<div class="foldopen" id="foldopen00128" data-start="{" data-end="}">
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="sockets_8h.html#afc4e245b982ccb5dfe229d0cd598a210">  128</a></span>ssize_t <a class="code hl_function" href="sockets_8h.html#afc4e245b982ccb5dfe229d0cd598a210">trySocketWrite</a>(<span class="keywordtype">int</span> socket, <span class="keywordtype">void</span> *data, <span class="keywordtype">size_t</span> dataSize) {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordtype">int</span> attemptsLeft = MAX_ATTEMPTS;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    ssize_t bytesSent;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> attempt = 0; attempt &lt; MAX_ATTEMPTS; attempt++) {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="comment">// Gestion des différentes requêtes possible</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        bytesSent = write(socket, data, dataSize);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">if</span> (bytesSent != -1) {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordflow">return</span> bytesSent;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>}</div>
+</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="asockets_8h_html_a2bf1aa32ae34baacb6050b8bcea9d9d4"><div class="ttname"><a href="sockets_8h.html#a2bf1aa32ae34baacb6050b8bcea9d9d4">getSocketAddress</a></div><div class="ttdeci">struct sockaddr_in getSocketAddress()</div><div class="ttdoc">Retourne l&#39;adresse de socket du serveur.</div><div class="ttdef"><b>Definition</b> sockets.h:79</div></div>
+<div class="ttc" id="asockets_8h_html_a4ebf1ee87f13cfff76001f1eeb337461"><div class="ttname"><a href="sockets_8h.html#a4ebf1ee87f13cfff76001f1eeb337461">getSocket</a></div><div class="ttdeci">int getSocket()</div><div class="ttdoc">Crée et retourne un socket.</div><div class="ttdef"><b>Definition</b> sockets.h:52</div></div>
+<div class="ttc" id="asockets_8h_html_ac19d633c992a34a13c3f98f441369ec8"><div class="ttname"><a href="sockets_8h.html#ac19d633c992a34a13c3f98f441369ec8">getServerAddress</a></div><div class="ttdeci">struct in_addr getServerAddress()</div><div class="ttdoc">Retourne l&#39;adresse du serveur sous forme de structure in_addr.</div><div class="ttdef"><b>Definition</b> sockets.h:63</div></div>
+<div class="ttc" id="asockets_8h_html_add3a664847b2b67a315126936c7d3e7a"><div class="ttname"><a href="sockets_8h.html#add3a664847b2b67a315126936c7d3e7a">trySocketRead</a></div><div class="ttdeci">ssize_t trySocketRead(int socket, void *data, size_t dataSize)</div><div class="ttdoc">Tente de lire des données depuis un socket.</div><div class="ttdef"><b>Definition</b> sockets.h:101</div></div>
+<div class="ttc" id="asockets_8h_html_afc4e245b982ccb5dfe229d0cd598a210"><div class="ttname"><a href="sockets_8h.html#afc4e245b982ccb5dfe229d0cd598a210">trySocketWrite</a></div><div class="ttdeci">ssize_t trySocketWrite(int socket, void *data, size_t dataSize)</div><div class="ttdoc">Tente d&#39;écrire des données sur un socket.</div><div class="ttdef"><b>Definition</b> sockets.h:128</div></div>
+<div class="ttc" id="astruct_socket_html"><div class="ttname"><a href="struct_socket.html">Socket</a></div><div class="ttdoc">Structure représentant une socket.</div><div class="ttdef"><b>Definition</b> sockets.h:39</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_821002d4f10779a80d4fb17bc32f21f1.html">utils</a></li><li class="navelem"><a class="el" href="sockets_8h.html">sockets.h</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

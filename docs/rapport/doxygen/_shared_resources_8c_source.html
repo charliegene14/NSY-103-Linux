@@ -1,0 +1,156 @@
+<!-- HTML header for doxygen 1.13.2-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NSY103 - DENIER Charlie:  Fichier source de include/managers/SharedResources.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">NSY103 - DENIER Charlie
+   </div>
+   <div id="projectbrief">Documentation technique du projet du module NSY103, le problème des philosophes.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_shared_resources_8c_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SharedResources.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_shared_resources_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef SHAREDRESOURCES_C</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define SHAREDRESOURCES_C</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="_shared_resources_8h.html">../entities/SharedResources.h</a>&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;sys/shm.h&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="_shared_resources_8c.html#af309af741de924f951c36dac13c8969b">   45</a></span><a class="code hl_struct" href="struct_shared_resources.html">SharedResources</a> *<a class="code hl_function" href="_shared_resources_8c.html#af309af741de924f951c36dac13c8969b">attachSharedResources</a>(<span class="keywordtype">int</span> sharedResourcesMemoryId) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_struct" href="struct_shared_resources.html">SharedResources</a> *sharedResources = (<a class="code hl_struct" href="struct_shared_resources.html">SharedResources</a> *) shmat(sharedResourcesMemoryId, NULL, 0);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    sem_init(&amp;sharedResources-&gt;<a class="code hl_variable" href="struct_shared_resources.html#ac17b234a21ab4b8429f2faa0a57fdfba">maxAllowedEating</a>, 1, 0);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    sem_init(&amp;sharedResources-&gt;<a class="code hl_variable" href="struct_shared_resources.html#ad5e92d650d51b3a2b1abf3d47046a696">philosopherCreationProcess</a>, 1, 1);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    sharedResources-&gt;<a class="code hl_variable" href="struct_shared_resources.html#a36031f50ba40b6edf01051f947e0b8a7">numberPhilosophers</a> = 0;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    sharedResources-&gt;<a class="code hl_variable" href="struct_shared_resources.html#a969b234bd36451658f9ce18f24bb743a">numberChopsticks</a> = 0;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    sharedResources-&gt;<a class="code hl_variable" href="struct_shared_resources.html#ae1f7016ead265cba384590e23940c13d">logsQueueId</a> = 0;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">return</span> sharedResources;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_shared_resources_8c_html_af309af741de924f951c36dac13c8969b"><div class="ttname"><a href="_shared_resources_8c.html#af309af741de924f951c36dac13c8969b">attachSharedResources</a></div><div class="ttdeci">SharedResources * attachSharedResources(int sharedResourcesMemoryId)</div><div class="ttdoc">Attache et initialise les ressources partagées.</div><div class="ttdef"><b>Definition</b> SharedResources.c:45</div></div>
+<div class="ttc" id="a_shared_resources_8h_html"><div class="ttname"><a href="_shared_resources_8h.html">SharedResources.h</a></div><div class="ttdoc">Définit la structure regroupant les ressources partagées utilisées par le serveur.</div></div>
+<div class="ttc" id="astruct_shared_resources_html"><div class="ttname"><a href="struct_shared_resources.html">SharedResources</a></div><div class="ttdoc">Structure regroupant les ressources partagées du serveur.</div><div class="ttdef"><b>Definition</b> SharedResources.h:45</div></div>
+<div class="ttc" id="astruct_shared_resources_html_a36031f50ba40b6edf01051f947e0b8a7"><div class="ttname"><a href="struct_shared_resources.html#a36031f50ba40b6edf01051f947e0b8a7">SharedResources::numberPhilosophers</a></div><div class="ttdeci">int numberPhilosophers</div><div class="ttdoc">Nombre actuel de philosophes dans la mémoire partagée.</div><div class="ttdef"><b>Definition</b> SharedResources.h:74</div></div>
+<div class="ttc" id="astruct_shared_resources_html_a969b234bd36451658f9ce18f24bb743a"><div class="ttname"><a href="struct_shared_resources.html#a969b234bd36451658f9ce18f24bb743a">SharedResources::numberChopsticks</a></div><div class="ttdeci">int numberChopsticks</div><div class="ttdoc">Nombre actuel de baguettes dans la mémoire partagée.</div><div class="ttdef"><b>Definition</b> SharedResources.h:87</div></div>
+<div class="ttc" id="astruct_shared_resources_html_ac17b234a21ab4b8429f2faa0a57fdfba"><div class="ttname"><a href="struct_shared_resources.html#ac17b234a21ab4b8429f2faa0a57fdfba">SharedResources::maxAllowedEating</a></div><div class="ttdeci">sem_t maxAllowedEating</div><div class="ttdoc">Sémaphore limitant le nombre maximum de philosophes pouvant manger simultanément.</div><div class="ttdef"><b>Definition</b> SharedResources.h:53</div></div>
+<div class="ttc" id="astruct_shared_resources_html_ad5e92d650d51b3a2b1abf3d47046a696"><div class="ttname"><a href="struct_shared_resources.html#ad5e92d650d51b3a2b1abf3d47046a696">SharedResources::philosopherCreationProcess</a></div><div class="ttdeci">sem_t philosopherCreationProcess</div><div class="ttdoc">Sémaphore permettant de sécuriser la création concurrente de philosophes.</div><div class="ttdef"><b>Definition</b> SharedResources.h:61</div></div>
+<div class="ttc" id="astruct_shared_resources_html_ae1f7016ead265cba384590e23940c13d"><div class="ttname"><a href="struct_shared_resources.html#ae1f7016ead265cba384590e23940c13d">SharedResources::logsQueueId</a></div><div class="ttdeci">int logsQueueId</div><div class="ttdoc">Identifiant de la file de logs.</div><div class="ttdef"><b>Definition</b> SharedResources.h:94</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_3b632b175d4850e946ee3ba45d8d1f8d.html">managers</a></li><li class="navelem"><a class="el" href="_shared_resources_8c.html">SharedResources.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

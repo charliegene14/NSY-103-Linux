@@ -1,0 +1,221 @@
+<!-- HTML header for doxygen 1.13.2-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NSY103 - DENIER Charlie:  Fichier source de include/managers/ServerContext.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">NSY103 - DENIER Charlie
+   </div>
+   <div id="projectbrief">Documentation technique du projet du module NSY103, le problème des philosophes.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_server_context_8c_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ServerContext.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_server_context_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#ifndef SERVERCONTEXT_C</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#define SERVERCONTEXT_C</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="maxmin__philosophers_8h.html">../maxmin_philosophers.h</a>&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="_server_context_8h.html">../entities/ServerContext.h</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="print__message_8h.html">../utils/print_message.h</a>&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;sys/shm.h&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;sys/msg.h&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;signal.h&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="_server_context_8c.html#a46afa8d9005578ba996229f966e77d59">   44</a></span><a class="code hl_struct" href="struct_server_context.html">ServerContext</a> <a class="code hl_function" href="_server_context_8c.html#a46afa8d9005578ba996229f966e77d59">initServerContext</a>() {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_struct" href="struct_server_context.html">ServerContext</a> serverContext;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    memset(&amp;serverContext, 0, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct_server_context.html">ServerContext</a>));</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    serverContext.<a class="code hl_variable" href="struct_server_context.html#a6c356fe0647193fa4e7b6256ff088da5">serverSocket</a> = -1;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    serverContext.<a class="code hl_variable" href="struct_server_context.html#a1120f24e903478c209307df905434c07">sharedResourcesMemoryId</a> = -1;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    serverContext.<a class="code hl_variable" href="struct_server_context.html#a6a7f1b7107ee55a91691e73e5784845b">numberServiceSockets</a> = 0;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    serverContext.<a class="code hl_variable" href="struct_server_context.html#a26f3684d5b835bebf2492a2c4e3a3ff5">numberClients</a> = 0;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">return</span> serverContext;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="_server_context_8c.html#a0d9c08a111d76a98fdac900cbfec990f">   71</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_server_context_8c.html#a0d9c08a111d76a98fdac900cbfec990f">cleanup</a>(<a class="code hl_struct" href="struct_server_context.html">ServerContext</a> *serverContext) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_function" href="print__message_8h.html#a64a80f0bdbaf134ec8ccac970c9f2840">printMessage</a>(INFO, <span class="stringliteral">&quot;Nettoyage des ressources...\n&quot;</span>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// Termine tout les processus service</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; serverContext-&gt;<a class="code hl_variable" href="struct_server_context.html#a26f3684d5b835bebf2492a2c4e3a3ff5">numberClients</a>; i++) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        kill(serverContext-&gt;<a class="code hl_variable" href="struct_server_context.html#a58b3a0486a35bf90120eefcc86babc02">clientsProcessIds</a>[i], SIGKILL);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_function" href="print__message_8h.html#a64a80f0bdbaf134ec8ccac970c9f2840">printMessage</a>(SUCCESS, <span class="stringliteral">&quot;Processus %d tué correctement. \n&quot;</span>, serverContext-&gt;<a class="code hl_variable" href="struct_server_context.html#a58b3a0486a35bf90120eefcc86babc02">clientsProcessIds</a>[i]);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">// Ferme le socket serveur</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">if</span> (serverContext-&gt;<a class="code hl_variable" href="struct_server_context.html#a6c356fe0647193fa4e7b6256ff088da5">serverSocket</a> != -1) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        close(serverContext-&gt;<a class="code hl_variable" href="struct_server_context.html#a6c356fe0647193fa4e7b6256ff088da5">serverSocket</a>);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_function" href="print__message_8h.html#a64a80f0bdbaf134ec8ccac970c9f2840">printMessage</a>(SUCCESS, <span class="stringliteral">&quot;Socket principal (%d) fermé correctement.\n&quot;</span>, serverContext-&gt;<a class="code hl_variable" href="struct_server_context.html#a6c356fe0647193fa4e7b6256ff088da5">serverSocket</a>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// Ferme tous les sockets de service</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; serverContext-&gt;<a class="code hl_variable" href="struct_server_context.html#a6a7f1b7107ee55a91691e73e5784845b">numberServiceSockets</a>; i++) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        close(serverContext-&gt;<a class="code hl_variable" href="struct_server_context.html#af86425acfda191e086396bc498724635">serviceSockets</a>[i]);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <a class="code hl_function" href="print__message_8h.html#a64a80f0bdbaf134ec8ccac970c9f2840">printMessage</a>(SUCCESS, <span class="stringliteral">&quot;Socket de service (%d) fermé correctement.\n&quot;</span>, serverContext-&gt;<a class="code hl_variable" href="struct_server_context.html#af86425acfda191e086396bc498724635">serviceSockets</a>[i]);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="comment">// Supprime la file de message IPC pour des logs</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">if</span> (serverContext-&gt;<a class="code hl_variable" href="struct_server_context.html#a36f6f6a95e86fc7d512687656f8af134">sharedResources</a>-&gt;<a class="code hl_variable" href="struct_shared_resources.html#ae1f7016ead265cba384590e23940c13d">logsQueueId</a>) {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        msgctl(serverContext-&gt;<a class="code hl_variable" href="struct_server_context.html#a36f6f6a95e86fc7d512687656f8af134">sharedResources</a>-&gt;<a class="code hl_variable" href="struct_shared_resources.html#ae1f7016ead265cba384590e23940c13d">logsQueueId</a>, IPC_RMID, NULL);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_function" href="print__message_8h.html#a64a80f0bdbaf134ec8ccac970c9f2840">printMessage</a>(SUCCESS, <span class="stringliteral">&quot;File de message des logs (%d) correctement supprimée du système.\n&quot;</span>, serverContext-&gt;<a class="code hl_variable" href="struct_server_context.html#a36f6f6a95e86fc7d512687656f8af134">sharedResources</a>-&gt;<a class="code hl_variable" href="struct_shared_resources.html#ae1f7016ead265cba384590e23940c13d">logsQueueId</a>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="comment">// Détruit les sémaphores</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    sem_destroy(&amp;serverContext-&gt;<a class="code hl_variable" href="struct_server_context.html#a36f6f6a95e86fc7d512687656f8af134">sharedResources</a>-&gt;<a class="code hl_variable" href="struct_shared_resources.html#ac17b234a21ab4b8429f2faa0a57fdfba">maxAllowedEating</a>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    sem_destroy(&amp;serverContext-&gt;<a class="code hl_variable" href="struct_server_context.html#a36f6f6a95e86fc7d512687656f8af134">sharedResources</a>-&gt;<a class="code hl_variable" href="struct_shared_resources.html#ad5e92d650d51b3a2b1abf3d47046a696">philosopherCreationProcess</a>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; serverContext-&gt;<a class="code hl_variable" href="struct_server_context.html#a36f6f6a95e86fc7d512687656f8af134">sharedResources</a>-&gt;<a class="code hl_variable" href="struct_shared_resources.html#a969b234bd36451658f9ce18f24bb743a">numberChopsticks</a>; i++) {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        sem_destroy(&amp;serverContext-&gt;<a class="code hl_variable" href="struct_server_context.html#a36f6f6a95e86fc7d512687656f8af134">sharedResources</a>-&gt;<a class="code hl_variable" href="struct_shared_resources.html#a82523578555f922d651a707335e715cb">chopsticks</a>[i].<a class="code hl_variable" href="struct_chopstick.html#a12fc6b0c2561009f12c966f67fcf70e8">usage</a>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <a class="code hl_function" href="print__message_8h.html#a64a80f0bdbaf134ec8ccac970c9f2840">printMessage</a>(SUCCESS, <span class="stringliteral">&quot;Sémaphores détruits correctement.\n&quot;</span>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="comment">// Détache la mémoire partagée</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    shmdt(serverContext-&gt;<a class="code hl_variable" href="struct_server_context.html#a36f6f6a95e86fc7d512687656f8af134">sharedResources</a>);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <a class="code hl_function" href="print__message_8h.html#a64a80f0bdbaf134ec8ccac970c9f2840">printMessage</a>(SUCCESS, <span class="stringliteral">&quot;Ressources en mémoire partagée détachées correctement.\n&quot;</span>);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="comment">// Libère le segment de mémoire partagée</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">if</span> (serverContext-&gt;<a class="code hl_variable" href="struct_server_context.html#a1120f24e903478c209307df905434c07">sharedResourcesMemoryId</a> != -1) {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        shmctl(serverContext-&gt;<a class="code hl_variable" href="struct_server_context.html#a1120f24e903478c209307df905434c07">sharedResourcesMemoryId</a>, IPC_RMID, NULL);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <a class="code hl_function" href="print__message_8h.html#a64a80f0bdbaf134ec8ccac970c9f2840">printMessage</a>(SUCCESS, <span class="stringliteral">&quot;Mémoire partagée %d correctement supprimée du système.\n&quot;</span>, serverContext-&gt;<a class="code hl_variable" href="struct_server_context.html#a1120f24e903478c209307df905434c07">sharedResourcesMemoryId</a>);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>}</div>
+</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_server_context_8c_html_a0d9c08a111d76a98fdac900cbfec990f"><div class="ttname"><a href="_server_context_8c.html#a0d9c08a111d76a98fdac900cbfec990f">cleanup</a></div><div class="ttdeci">void cleanup(ServerContext *serverContext)</div><div class="ttdoc">Nettoie et libère les ressources associées au serveur.</div><div class="ttdef"><b>Definition</b> ServerContext.c:71</div></div>
+<div class="ttc" id="a_server_context_8c_html_a46afa8d9005578ba996229f966e77d59"><div class="ttname"><a href="_server_context_8c.html#a46afa8d9005578ba996229f966e77d59">initServerContext</a></div><div class="ttdeci">ServerContext initServerContext()</div><div class="ttdoc">Initialise le contexte serveur.</div><div class="ttdef"><b>Definition</b> ServerContext.c:44</div></div>
+<div class="ttc" id="a_server_context_8h_html"><div class="ttname"><a href="_server_context_8h.html">ServerContext.h</a></div><div class="ttdoc">Définit la structure de contexte du serveur.</div></div>
+<div class="ttc" id="amaxmin__philosophers_8h_html"><div class="ttname"><a href="maxmin__philosophers_8h.html">maxmin_philosophers.h</a></div><div class="ttdoc">Définit les macros de configuration pour le nombre de philosophes et les temps d&#39;état.</div></div>
+<div class="ttc" id="aprint__message_8h_html"><div class="ttname"><a href="print__message_8h.html">print_message.h</a></div><div class="ttdoc">Définit des fonctions pour l&#39;affichage de messages colorés sur la console.</div></div>
+<div class="ttc" id="aprint__message_8h_html_a64a80f0bdbaf134ec8ccac970c9f2840"><div class="ttname"><a href="print__message_8h.html#a64a80f0bdbaf134ec8ccac970c9f2840">printMessage</a></div><div class="ttdeci">void printMessage(MessageType type, const char *format,...)</div><div class="ttdoc">Affiche un message formaté avec une couleur spécifique sur la console.</div><div class="ttdef"><b>Definition</b> print_message.h:66</div></div>
+<div class="ttc" id="astruct_chopstick_html_a12fc6b0c2561009f12c966f67fcf70e8"><div class="ttname"><a href="struct_chopstick.html#a12fc6b0c2561009f12c966f67fcf70e8">Chopstick::usage</a></div><div class="ttdeci">sem_t usage</div><div class="ttdef"><b>Definition</b> Chopstick.h:32</div></div>
+<div class="ttc" id="astruct_server_context_html"><div class="ttname"><a href="struct_server_context.html">ServerContext</a></div><div class="ttdoc">Structure regroupant les ressources et informations du serveur.</div><div class="ttdef"><b>Definition</b> ServerContext.h:44</div></div>
+<div class="ttc" id="astruct_server_context_html_a1120f24e903478c209307df905434c07"><div class="ttname"><a href="struct_server_context.html#a1120f24e903478c209307df905434c07">ServerContext::sharedResourcesMemoryId</a></div><div class="ttdeci">int sharedResourcesMemoryId</div><div class="ttdoc">Identifiant de la mémoire partagée.</div><div class="ttdef"><b>Definition</b> ServerContext.h:58</div></div>
+<div class="ttc" id="astruct_server_context_html_a26f3684d5b835bebf2492a2c4e3a3ff5"><div class="ttname"><a href="struct_server_context.html#a26f3684d5b835bebf2492a2c4e3a3ff5">ServerContext::numberClients</a></div><div class="ttdeci">size_t numberClients</div><div class="ttdoc">Nombre de clients connectés.</div><div class="ttdef"><b>Definition</b> ServerContext.h:91</div></div>
+<div class="ttc" id="astruct_server_context_html_a36f6f6a95e86fc7d512687656f8af134"><div class="ttname"><a href="struct_server_context.html#a36f6f6a95e86fc7d512687656f8af134">ServerContext::sharedResources</a></div><div class="ttdeci">SharedResources * sharedResources</div><div class="ttdoc">Ressources partagées.</div><div class="ttdef"><b>Definition</b> ServerContext.h:65</div></div>
+<div class="ttc" id="astruct_server_context_html_a58b3a0486a35bf90120eefcc86babc02"><div class="ttname"><a href="struct_server_context.html#a58b3a0486a35bf90120eefcc86babc02">ServerContext::clientsProcessIds</a></div><div class="ttdeci">pid_t clientsProcessIds[MAX_PHILOSOPHERS]</div><div class="ttdoc">Tableau des PID des processus clients.</div><div class="ttdef"><b>Definition</b> ServerContext.h:86</div></div>
+<div class="ttc" id="astruct_server_context_html_a6a7f1b7107ee55a91691e73e5784845b"><div class="ttname"><a href="struct_server_context.html#a6a7f1b7107ee55a91691e73e5784845b">ServerContext::numberServiceSockets</a></div><div class="ttdeci">int numberServiceSockets</div><div class="ttdoc">Nombre de sockets de services utilisés.</div><div class="ttdef"><b>Definition</b> ServerContext.h:78</div></div>
+<div class="ttc" id="astruct_server_context_html_a6c356fe0647193fa4e7b6256ff088da5"><div class="ttname"><a href="struct_server_context.html#a6c356fe0647193fa4e7b6256ff088da5">ServerContext::serverSocket</a></div><div class="ttdeci">int serverSocket</div><div class="ttdoc">Socket principal du serveur.</div><div class="ttdef"><b>Definition</b> ServerContext.h:51</div></div>
+<div class="ttc" id="astruct_server_context_html_af86425acfda191e086396bc498724635"><div class="ttname"><a href="struct_server_context.html#af86425acfda191e086396bc498724635">ServerContext::serviceSockets</a></div><div class="ttdeci">int serviceSockets[MAX_PHILOSOPHERS]</div><div class="ttdoc">Tableau des sockets de service.</div><div class="ttdef"><b>Definition</b> ServerContext.h:73</div></div>
+<div class="ttc" id="astruct_shared_resources_html_a82523578555f922d651a707335e715cb"><div class="ttname"><a href="struct_shared_resources.html#a82523578555f922d651a707335e715cb">SharedResources::chopsticks</a></div><div class="ttdeci">Chopstick chopsticks[MAX_PHILOSOPHERS]</div><div class="ttdoc">Tableau des baguettes.</div><div class="ttdef"><b>Definition</b> SharedResources.h:82</div></div>
+<div class="ttc" id="astruct_shared_resources_html_a969b234bd36451658f9ce18f24bb743a"><div class="ttname"><a href="struct_shared_resources.html#a969b234bd36451658f9ce18f24bb743a">SharedResources::numberChopsticks</a></div><div class="ttdeci">int numberChopsticks</div><div class="ttdoc">Nombre actuel de baguettes dans la mémoire partagée.</div><div class="ttdef"><b>Definition</b> SharedResources.h:87</div></div>
+<div class="ttc" id="astruct_shared_resources_html_ac17b234a21ab4b8429f2faa0a57fdfba"><div class="ttname"><a href="struct_shared_resources.html#ac17b234a21ab4b8429f2faa0a57fdfba">SharedResources::maxAllowedEating</a></div><div class="ttdeci">sem_t maxAllowedEating</div><div class="ttdoc">Sémaphore limitant le nombre maximum de philosophes pouvant manger simultanément.</div><div class="ttdef"><b>Definition</b> SharedResources.h:53</div></div>
+<div class="ttc" id="astruct_shared_resources_html_ad5e92d650d51b3a2b1abf3d47046a696"><div class="ttname"><a href="struct_shared_resources.html#ad5e92d650d51b3a2b1abf3d47046a696">SharedResources::philosopherCreationProcess</a></div><div class="ttdeci">sem_t philosopherCreationProcess</div><div class="ttdoc">Sémaphore permettant de sécuriser la création concurrente de philosophes.</div><div class="ttdef"><b>Definition</b> SharedResources.h:61</div></div>
+<div class="ttc" id="astruct_shared_resources_html_ae1f7016ead265cba384590e23940c13d"><div class="ttname"><a href="struct_shared_resources.html#ae1f7016ead265cba384590e23940c13d">SharedResources::logsQueueId</a></div><div class="ttdeci">int logsQueueId</div><div class="ttdoc">Identifiant de la file de logs.</div><div class="ttdef"><b>Definition</b> SharedResources.h:94</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_3b632b175d4850e946ee3ba45d8d1f8d.html">managers</a></li><li class="navelem"><a class="el" href="_server_context_8c.html">ServerContext.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

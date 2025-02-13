@@ -1,0 +1,351 @@
+<!-- HTML header for doxygen 1.13.2-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NSY103 - DENIER Charlie: Référence du fichier include/managers/Logs.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">NSY103 - DENIER Charlie
+   </div>
+   <div id="projectbrief">Documentation technique du projet du module NSY103, le problème des philosophes.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_logs_8c.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier Logs.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implémente les fonctions de gestion des logs et des chemins des fichiers de log.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="files_8h_source.html">../utils/files.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_philosopher_8h_source.html">../entities/Philosopher.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_logs_8h_source.html">../entities/Logs.h</a>&quot;</code><br />
+<code>#include &lt;sys/msg.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdarg.h&gt;</code><br />
+</div>
+<p><a href="_logs_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a00e30e9cc3753c8069fa98f4600a9e35" id="r_a00e30e9cc3753c8069fa98f4600a9e35"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00e30e9cc3753c8069fa98f4600a9e35">initLogsQueue</a> ()</td></tr>
+<tr class="memdesc:a00e30e9cc3753c8069fa98f4600a9e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise une file de messages IPC pour la gestion des logs.  <br /></td></tr>
+<tr class="separator:a00e30e9cc3753c8069fa98f4600a9e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96c1be38e26c4e2fb1ebf9aaafd58ee3" id="r_a96c1be38e26c4e2fb1ebf9aaafd58ee3"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96c1be38e26c4e2fb1ebf9aaafd58ee3">getClientInfoFilepath</a> (pid_t pid)</td></tr>
+<tr class="memdesc:a96c1be38e26c4e2fb1ebf9aaafd58ee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construit le chemin complet du fichier de log associé à un client.  <br /></td></tr>
+<tr class="separator:a96c1be38e26c4e2fb1ebf9aaafd58ee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8051b7d6799cd831dee5974bbc845a7" id="r_ad8051b7d6799cd831dee5974bbc845a7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8051b7d6799cd831dee5974bbc845a7">getServerStateFilePath</a> ()</td></tr>
+<tr class="memdesc:ad8051b7d6799cd831dee5974bbc845a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le chemin complet du fichier de log du serveur.  <br /></td></tr>
+<tr class="separator:ad8051b7d6799cd831dee5974bbc845a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab078ef6687fe3bf32c00a1124f472825" id="r_ab078ef6687fe3bf32c00a1124f472825"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab078ef6687fe3bf32c00a1124f472825">logClientInfo</a> (int logsQueueId, char *message)</td></tr>
+<tr class="memdesc:ab078ef6687fe3bf32c00a1124f472825"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envoie un message de log dans la file de logs pour un client.  <br /></td></tr>
+<tr class="separator:ab078ef6687fe3bf32c00a1124f472825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bf645e4ee0e687b0d2ddfc8c1e16e2e" id="r_a6bf645e4ee0e687b0d2ddfc8c1e16e2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bf645e4ee0e687b0d2ddfc8c1e16e2e">logClientAction</a> (int logsQueueId, <a class="el" href="struct_philosopher.html">Philosopher</a> philosopher)</td></tr>
+<tr class="memdesc:a6bf645e4ee0e687b0d2ddfc8c1e16e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formate et envoie un message de log décrivant l'action d'un philosophe.  <br /></td></tr>
+<tr class="separator:a6bf645e4ee0e687b0d2ddfc8c1e16e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92796e85f4e4cf33e94541b4188a8c03" id="r_a92796e85f4e4cf33e94541b4188a8c03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92796e85f4e4cf33e94541b4188a8c03">logServerState</a> (int logsQueueId, const char *format,...)</td></tr>
+<tr class="memdesc:a92796e85f4e4cf33e94541b4188a8c03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formate et envoie un message de log depuis le serveur.  <br /></td></tr>
+<tr class="separator:a92796e85f4e4cf33e94541b4188a8c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Implémente les fonctions de gestion des logs et des chemins des fichiers de log. </p>
+<p>Ce fichier d'implémentation fournit des fonctions pour :</p><ul>
+<li>Initialiser une file de messages IPC destinée à la gestion des logs.</li>
+<li>Générer les chemins des fichiers de log pour les clients et le serveur.</li>
+<li>Envoyer des messages de log depuis le client et le serveur via des files de messages IPC.</li>
+</ul>
+<p>Les fonctions définies dans ce fichier sont :</p><ul>
+<li><b><a class="el" href="#a00e30e9cc3753c8069fa98f4600a9e35" title="Initialise une file de messages IPC pour la gestion des logs.">initLogsQueue()</a></b> : Initialise une file de messages IPC pour les logs et retourne son identifiant.</li>
+<li><b><a class="el" href="#a96c1be38e26c4e2fb1ebf9aaafd58ee3" title="Construit le chemin complet du fichier de log associé à un client.">getClientInfoFilepath(pid_t pid)</a></b> : Construit et retourne le chemin du fichier de log associé à un client, basé sur son PID.</li>
+<li><b><a class="el" href="#ad8051b7d6799cd831dee5974bbc845a7" title="Retourne le chemin complet du fichier de log du serveur.">getServerStateFilePath()</a></b> : Retourne le chemin complet du fichier de log du serveur.</li>
+<li><b><a class="el" href="#ab078ef6687fe3bf32c00a1124f472825" title="Envoie un message de log dans la file de logs pour un client.">logClientInfo(int logsQueueId, char *message)</a></b> : Envoie un message de log dans la file de logs pour un client.</li>
+<li><b><a class="el" href="#a6bf645e4ee0e687b0d2ddfc8c1e16e2e" title="Formate et envoie un message de log décrivant l&#39;action d&#39;un philosophe.">logClientAction(int logsQueueId, Philosopher philosopher)</a></b> : Formate et envoie un message de log décrivant l'action d'un philosophe (penser ou manger).</li>
+<li><b><a class="el" href="#a92796e85f4e4cf33e94541b4188a8c03" title="Formate et envoie un message de log depuis le serveur.">logServerState(int logsQueueId, const char *format, ...)</a></b> : Formate et envoie un message de log depuis le serveur à l'aide d'arguments variables.</li>
+</ul>
+<p>Les inclusions nécessaires dans ce fichier sont :</p><ul>
+<li>"../utils/files.h" pour la gestion des chemins de fichiers.</li>
+<li>"../entities/Philosopher.h" pour la définition de la structure <code><a class="el" href="struct_philosopher.html" title="Structure représentant la base d&#39;un philosophe.">Philosopher</a></code>.</li>
+<li>"../entities/Logs.h" pour la définition de la structure <code><a class="el" href="struct_log.html" title="Structure représentant un message de log dans une file de message IPC.">Log</a></code> et des constantes associées.</li>
+<li>&lt;sys/msg.h&gt; pour la gestion des files de messages IPC.</li>
+<li>&lt;string.h&gt;, &lt;unistd.h&gt;, &lt;stdio.h&gt;, &lt;stdlib.h&gt; et &lt;stdarg.h&gt; pour diverses fonctions utilitaires. </li>
+</ul>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a96c1be38e26c4e2fb1ebf9aaafd58ee3" name="a96c1be38e26c4e2fb1ebf9aaafd58ee3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96c1be38e26c4e2fb1ebf9aaafd58ee3">&#9670;&#160;</a></span>getClientInfoFilepath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * getClientInfoFilepath </td>
+          <td>(</td>
+          <td class="paramtype">pid_t</td>          <td class="paramname"><span class="paramname"><em>pid</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construit le chemin complet du fichier de log associé à un client. </p>
+<p>Cette fonction formate un nom de fichier en utilisant le préfixe <code>CLIENT_INFO_PREFIX</code>, le PID du client, et l'extension <code>LOG_EXTENSION</code>, puis appelle la fonction <code>getFilePath</code> pour obtenir le chemin complet.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pid</td><td>Le PID du client. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>char* Le chemin complet du fichier de log du client. </dd></dl>
+
+</div>
+</div>
+<a id="ad8051b7d6799cd831dee5974bbc845a7" name="ad8051b7d6799cd831dee5974bbc845a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8051b7d6799cd831dee5974bbc845a7">&#9670;&#160;</a></span>getServerStateFilePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * getServerStateFilePath </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne le chemin complet du fichier de log du serveur. </p>
+<p>Cette fonction utilise la constante <code>SERVER_STATE_PATH</code> pour obtenir le chemin complet du fichier de log du serveur via la fonction <code>getFilePath</code>.</p>
+<dl class="section return"><dt>Renvoie</dt><dd>char* Le chemin complet du fichier de log du serveur. </dd></dl>
+
+</div>
+</div>
+<a id="a00e30e9cc3753c8069fa98f4600a9e35" name="a00e30e9cc3753c8069fa98f4600a9e35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00e30e9cc3753c8069fa98f4600a9e35">&#9670;&#160;</a></span>initLogsQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int initLogsQueue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise une file de messages IPC pour la gestion des logs. </p>
+<p>Cette fonction crée une file de messages privée (IPC_PRIVATE) avec les permissions en lecture/écriture pour le propriétaire (0600) et retourne l'identifiant de la file créée.</p>
+<dl class="section return"><dt>Renvoie</dt><dd>int L'identifiant de la file de messages IPC. </dd></dl>
+
+</div>
+</div>
+<a id="a6bf645e4ee0e687b0d2ddfc8c1e16e2e" name="a6bf645e4ee0e687b0d2ddfc8c1e16e2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bf645e4ee0e687b0d2ddfc8c1e16e2e">&#9670;&#160;</a></span>logClientAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void logClientAction </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>logsQueueId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_philosopher.html">Philosopher</a></td>          <td class="paramname"><span class="paramname"><em>philosopher</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Formate et envoie un message de log décrivant l'action d'un philosophe. </p>
+<p>Cette fonction détermine l'action en cours du philosophe (penser ou manger) et lui associe une mise en forme colorée pour la sortie console. Elle alloue dynamiquement un buffer pour formater le message, qui indique l'identifiant du philosophe, l'action en cours et la durée restante de l'état. Le message est ensuite envoyé en appelant <code>logClientInfo</code>, puis le buffer est libéré.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logsQueueId</td><td>L'identifiant de la file de messages IPC utilisée pour les logs. </td></tr>
+    <tr><td class="paramname">philosopher</td><td>La structure <code><a class="el" href="struct_philosopher.html" title="Structure représentant la base d&#39;un philosophe.">Philosopher</a></code> contenant les informations sur le philosophe. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab078ef6687fe3bf32c00a1124f472825" name="ab078ef6687fe3bf32c00a1124f472825"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab078ef6687fe3bf32c00a1124f472825">&#9670;&#160;</a></span>logClientInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void logClientInfo </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>logsQueueId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envoie un message de log dans la file de logs pour un client. </p>
+<p>Cette fonction initialise une structure <code><a class="el" href="struct_log.html" title="Structure représentant un message de log dans une file de message IPC.">Log</a></code>, définit son type avec le PID courant (afin que le bon thread réceptionne le log) et copie le message dans le champ <code>text</code> en respectant la taille maximale. Le message est ensuite envoyé via la file de messages IPC.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logsQueueId</td><td>L'identifiant de la file de messages IPC utilisée pour les logs. </td></tr>
+    <tr><td class="paramname">message</td><td>Le message de log à envoyer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a92796e85f4e4cf33e94541b4188a8c03" name="a92796e85f4e4cf33e94541b4188a8c03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92796e85f4e4cf33e94541b4188a8c03">&#9670;&#160;</a></span>logServerState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void logServerState </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>logsQueueId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>format</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Formate et envoie un message de log depuis le serveur. </p>
+<p>Cette fonction utilise un format de chaîne de caractères et des arguments variables pour construire le message de log. Le message est formaté dans une structure <code><a class="el" href="struct_log.html" title="Structure représentant un message de log dans une file de message IPC.">Log</a></code> avec le type défini par <code>SERVER_LOG_TYPE</code> et envoyé via la file de messages IPC.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logsQueueId</td><td>L'identifiant de la file de messages IPC utilisée pour les logs. </td></tr>
+    <tr><td class="paramname">format</td><td>La chaîne de format utilisée pour le message de log. </td></tr>
+    <tr><td class="paramname">...</td><td>Arguments variables correspondant au format. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_3b632b175d4850e946ee3ba45d8d1f8d.html">managers</a></li><li class="navelem"><a class="el" href="_logs_8c.html">Logs.c</a></li>
+    <li class="footer">Généré par <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>
